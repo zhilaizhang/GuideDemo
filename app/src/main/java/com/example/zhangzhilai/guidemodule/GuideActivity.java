@@ -3,6 +3,7 @@ package com.example.zhangzhilai.guidemodule;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.view.ViewPager;
+import android.view.KeyEvent;
 
 /**
  * Created by zhangzhilai on 1/8/15.
@@ -43,5 +44,11 @@ public class GuideActivity extends FragmentActivity {
         mGuideBackGrounds[2] = R.drawable.ico_loading_guide3;
     }
 
-
+    @Override
+    public boolean onKeyDown(int keyCode, KeyEvent event) {
+        if(event.getKeyCode() == KeyEvent.KEYCODE_BACK){
+            return true;
+        }
+        return super.onKeyDown(keyCode, event);
+    }
 }
