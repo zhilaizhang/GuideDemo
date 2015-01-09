@@ -1,10 +1,10 @@
 package com.example.zhangzhilai.guidemodule;
 
+import android.content.Intent;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
 import android.support.v4.app.Fragment;
-import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -75,6 +75,15 @@ public class GuidViewFragment extends Fragment{
         button.setWidth(30);
         button.setHeight(30);
         button.setText("hello world");
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent();
+                intent.setClass(getActivity(), JumpActivity.class);
+                getActivity().finish();
+                startActivity(intent);
+            }
+        });
         view.addView(button);
     }
 

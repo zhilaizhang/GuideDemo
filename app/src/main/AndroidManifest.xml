@@ -17,6 +17,7 @@
             </intent-filter>
         </activity>
         <activity android:name=".GuideActivity"/>
+        <activity android:name=".JumpActivity"/>
     </application>
 
 </manifest>
